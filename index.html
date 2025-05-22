@@ -11,18 +11,20 @@
 <body>
 This is a regular line of the text. <br>
 <script>
+    let firstName;
+    firstName = prompt("Please tell me your first name:");
+    document.write("Welcome to my website, " +firstName);
+</script>
+<script>
     document.write("Last modified: " + document.lastModified);
 </script>
-<br> This is another line of the regular text. <br>
+<script src="script1.js">
+</script>
 
-<nosript>
-    <p>
-        Hey, your browser has JavaSript turned off !
-    </p>
-    <p>
-        Okay, cool, perhaps you'll prefer this <a href="no-js.html">
-        non-JavaScript version</a> of the page
-    </p>
-</nosript>
+<hr>
+<footer>
+    <script src="footer.js">
+    </script>
+</footer>
 </body>
 </html>
