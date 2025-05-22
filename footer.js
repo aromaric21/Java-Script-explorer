@@ -1,1 +1,1 @@
-document.write("This page is Copyright" + new Date().getFullYear());
+document.write("This page is Copyright " + new Date().getFullYear());
