@@ -2,21 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Calling the function in response to an event</title>
+    <title>Passing multiple values to the function</title>
 
     <script>
-        function makeBackgroundRed(){
-            document.body.style.backgroundColor = "red";
-        }
-        function makeBackgroundWhite(){
-            document.body.style.backgroundColor = "white";
+        function changeColors(newBackColor, newForeColor){
+            document.body.style.backgroundColor = newBackColor;
+            document.body.style.backgroundColor = newForeColor;
         }
     </script>
 </head>
 <body>
 <!-- Other body elements go here -->
-<button onclick="makeBackgroundRed()">Make Background Red</button>
-<button onclick="makeBackgroundWhite()">Make Background White</button>
+<h1>Passing multiple values to the function</h1>
+<button onclick="changeColors('red', 'white')">Red Background, White Text</button>
+<button onclick="changeColors('white', 'red')">White Background, Red Text</button>
 <hr>
 <footer>
     <script src="footer.js">
