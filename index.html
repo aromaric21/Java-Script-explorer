@@ -2,21 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Passing multiple values to the function</title>
-
-    <script>
-        function changeColors(newBackColor, newForeColor){
-            document.body.style.backgroundColor = newBackColor;
-            document.body.style.backgroundColor = newForeColor;
-        }
-    </script>
+    <title>Anonymous Function </title>
 </head>
 <body>
-<!-- Other body elements go here -->
-<h1>Passing multiple values to the function</h1>
-<button onclick="changeColors('red', 'white')">Red Background, White Text</button>
-<button onclick="changeColors('white', 'red')">White Background, Red Text</button>
+<button id="bgRed">Make Background Red</button>
+<button id="bgWhite">White Background, Red Text</button>
 <hr>
-<script src="script1.js"></script>
+<script>
+    function makeBackgroundRed() {
+        document.body.style.backgroundColor = "red";
+    }
+    function makeBackgroundWhite() {
+        document.body.style.backgroundColor = "white";
+    }
+    document.getElementById("bgRed").addEventListener("click", makeBackgroundRed);
+    document.getElementById("bgWhite").addEventListener("click", makeBackgroundWhite);
+</script>
 </body>
 </html>
