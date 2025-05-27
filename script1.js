@@ -1,8 +1,8 @@
 const preTipTotal = 100.00;
 const tipPercentage = 0.15;
 
-// Declare tipCost using an anonymous function
-const tipCost = function(preTip, tipPercent) {
+// Declare tipCost using an arrow function
+const tipCost = (preTip, tipPercent) => {
     const tipResult = preTip * tipPercent;
     return (tipResult);
 }
