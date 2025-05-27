@@ -9,14 +9,13 @@
 <button id="bgWhite">White Background, Red Text</button>
 <hr>
 <script>
-    function makeBackgroundRed() {
+
+    document.getElementById("bgRed").addEventListener("click", function() {
         document.body.style.backgroundColor = "red";
-    }
-    function makeBackgroundWhite() {
+    });
+    document.getElementById("bgWhite").addEventListener("click", function() {
         document.body.style.backgroundColor = "white";
-    }
-    document.getElementById("bgRed").addEventListener("click", makeBackgroundRed);
-    document.getElementById("bgWhite").addEventListener("click", makeBackgroundWhite);
+    });
 </script>
 </body>
 </html>
