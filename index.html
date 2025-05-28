@@ -2,19 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Anonymous Function </title>
+    <title> So Many Kale Recipes </title>
 </head>
 <body>
-<button id="bgRed">Make Background Red</button>
-<button id="bgWhite">White Background, Red Text</button>
-<hr>
-<script>
 
-    document.getElementById("bgRed").addEventListener("click", () =>
-        document.body.style.backgroundColor = "red");
-    document.getElementById("bgWhite").addEventListener("click", () =>
-        document.body.style.backgroundColor = "white");
-</script>
-<script src="script1.js"></script>
+<header id="page-banner">
+    <h1>Above and Beyond the kale of Duty</h1>
+</header>
+<main id="page-content">
+    <p>
+        Do you love to cook with <a href="kale.html">kale</a>?
+    </p>
+</main>
+    <script>
+        const content = document.getElementById('page-content');
+        const firstContentChild = content.firstChild;
+        console.log(firstContentChild);
+
+        const para = document.querySelector("main > p");
+        const lastParaChildElement = para.lastElementChild;
+        console.log(lastParaChildElement);
+    </script>
 </body>
 </html>
