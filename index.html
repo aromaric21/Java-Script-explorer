@@ -14,6 +14,17 @@
         Do you love to cook with <a href="kale.html">kale</a>?
     </p>
     <img id="header-image" src="mangosteen.jpeg" alt="Drawing of a mangosteen">
+
+    <div id="my-div"></div>
+    <button id="my-button">Click to add some text, above</button>
+
+    <div> Type a key: </div>
+    <input id="key-input" type="text">
+    <div>
+        Here's the code of the key you pressed:
+    </div>
+    <div id="key-output">
+    </div>
 </main>
     <script>
         const newArticle = document.createElement("article");
@@ -34,6 +45,26 @@
 
         const headerImage = document.getElementById("header-image");
         headerImage.setAttribute("alt", "Lithograph of a mangosteen");
+
+        const myButton = document.getElementById('my-button');
+        myButton.addEventListener('click', function() {
+            const myDiv = document.
+            getElementById('my-div');
+            myDiv.innerHTML = '<h1>Hello Click World!</h1>';
+        });
+
+        document.addEventListener('DOMContentLoaded',
+            function() {
+                console.log('We are loaded!');
+            });
+
+        const keyInput = document.getElementById('key-input');
+        keyInput.addEventListener('keypress', function(e)
+        {
+            const keyOutput = document.
+            getElementById('key-output');
+            keyOutput.innerHTML = e.which;
+        });
     </script>
 </body>
 </html>
