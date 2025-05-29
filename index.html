@@ -5,23 +5,35 @@
     <title> So Many Kale Recipes </title>
 </head>
 <body>
-
 <header id="page-banner">
     <h1>Above and Beyond the kale of Duty</h1>
 </header>
 <main id="page-content">
+    <h2 id="nav-heading">Navigation</h2>
     <p>
         Do you love to cook with <a href="kale.html">kale</a>?
     </p>
+    <img id="header-image" src="mangosteen.jpeg" alt="Drawing of a mangosteen">
 </main>
     <script>
-        const content = document.getElementById('page-content');
-        const firstContentChild = content.firstChild;
-        console.log(firstContentChild);
+        const newArticle = document.createElement("article");
+        document.querySelector("main").append(newArticle);
 
-        const para = document.querySelector("main > p");
-        const lastParaChildElement = para.lastElementChild;
-        console.log(lastParaChildElement);
+        const newNav = document.createElement("nav");
+        document.querySelector("main").prepend(newNav);
+        newNav.innerHTML = "<h2>Navigation</h2>";
+
+        const navHeading = document.getElementById("nav-heading");
+        navHeading.insertAdjacentText("afterbegin", "Main ");
+
+        const pageTitle = document.querySelector("h1");
+        pageTitle.style.fontSize = "64px";
+        pageTitle.style.color = "maroon";
+        pageTitle.style.textAlign = "center";
+        pageTitle.style.border ="1px solid black";
+
+        const headerImage = document.getElementById("header-image");
+        headerImage.setAttribute("alt", "Lithograph of a mangosteen");
     </script>
 </body>
 </html>
