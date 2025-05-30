@@ -24,6 +24,57 @@
 
     // Output the result
     console.log(tempsCelsius);
+
+
+    // Declare an array of product inventory
+    const unitsInStock = [547, 213, 156, 844, 449, 71,
+        313, 117];
+    // Get the total units in stock
+    const initialUnits = 0;
+    const totalUnits = unitsInStock.reduce
+    ((accumulatedUnits, currentInventoryValue) => {
+        return accumulatedUnits +
+            currentInventoryValue;
+    }, initialUnits);
+    // Output the result
+    console.log("Total units in stock: " + totalUnits);
+
+
+    // Declare an array of product objects
+    const products = [
+        { name: 'doodad', units: 547 },
+        { name: 'gizmo', units: 213 },
+        { name: 'gimcrackery', units: 156 },
+        { name: 'knickknack', units: 844 },
+        { name: 'bric-a-brac', units: 449 },
+        { name: 'thingamajig', units: 71 },
+        { name: 'watchamacallit', units: 313 },
+        { name: 'widget', units: 117 }
+    ];
+    // Query the array
+    const strQuery = "gizmo";
+    const stock = products.find((currentProduct) => {
+        return currentProduct.name === strQuery;
+    });
+
+    // Output the result
+    if (stock) {
+        console.log("Product " + stock.name + " has "
+            + stock.units + " units in stock.");
+    } else {
+        console.log("Product " + strQuery + " notfound.");
+    }
+
+    // Useful Array Methods
+    // concat()
+    // join()
+    // pop()
+    // push()
+    // reverse()
+    // shift()
+    // slice()
+    // sort()
+    // unshift()
 </script>
 </body>
 </html>
