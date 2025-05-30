@@ -2,9 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Handle Array in JavaScript</title>
 </head>
 <body>
+<script>
+    // Declare the array
+    const dogPhotos = ["dog-1", "dog-2", "dog-3", "dog-4", "dog-5", "dog-6"];
 
+    // Iterate through the array
+    dogPhotos.forEach((value, index) => {
+        console.log(" Element "+ index + " has the value " +value);
+    });
+
+    // Declare an array of Fahrenheit temperates
+    const tempsFarenheit = [-40, 0, 32, 100, 212];
+
+    // Convert each array value to Celsius
+    const tempsCelsius = tempsFarenheit.map(currentTemp => {
+        return (currentTemp - 32) * 0.5556;
+    });
+
+    // Output the result
+    console.log(tempsCelsius);
+</script>
 </body>
 </html>
